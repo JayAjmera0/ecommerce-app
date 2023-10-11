@@ -26,10 +26,10 @@ function ProductDetail({ addToCart }) {
 
   return (
     <div>
-      <h1>{product.name}</h1>
-      <p>${product.price}</p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
-    </div>
+          <h1>{product.name}</h1>
+          <p>${product.price}</p>
+          <button onClick={handleAddToCart}>Add to Cart</button>
+            </div>
   );
 }
 
