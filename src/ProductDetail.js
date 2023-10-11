@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -7,7 +8,8 @@ const products = [
   { id: 3, name: 'Product 3', price: 20, description: 'Description for Product 3' },
 ];
 
-function ProductDetail() {
+
+function ProductDetail({ addToCart }) {
   const { id } = useParams();
   const productId = parseInt(id);
   const product = products.find(product => product.id === productId);
@@ -16,12 +18,16 @@ function ProductDetail() {
     return <div>Product not found!</div>;
   }
 
+  const handleAddToCart = () => {
+    addToCart(product);
+    alert('Product added to cart!');
+  };
+
   return (
     <div>
       <h1>{product.name}</h1>
       <p>${product.price}</p>
-      <p>{product.description}</p>
-      <button>Add to Cart</button>
+      <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 }
