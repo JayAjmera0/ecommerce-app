@@ -1,5 +1,5 @@
 nav {
-  background-color: #f0e5e5; /* Soft pink background color */
+  background-color: #2e2c2d;
   padding: 20px;
 }
 
@@ -19,10 +19,21 @@ li {
 /* Style for the links */
 a {
   text-decoration: none;
-  color: #4d4d4d; /* Dark gray text color */
+  color: #4d4d4d;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #8a8a8a; /* Lighter gray text color on hover */
+  color: #8a8a8a;
+}
+
+/* Specific style for Home and Cart links */
+a[href="/"]:not(.big-image):not(.product-card) {
+  color: #d8d3cf; /* Text color for Home and Cart links */
+  font-weight: bold; /* Make the text bold */
+}
+
+a[href="/cart"]:not(.big-image):not(.product-card) {
+  color: #d8d3cf; /* Text color for the "CART" link */
+  font-weight: bold; /* Make the text bold */
 }
