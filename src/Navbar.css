@@ -1,0 +1,28 @@
+nav {
+  background-color: #f0e5e5; /* Soft pink background color */
+  padding: 30px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+/* Style for the links */
+a {
+  text-decoration: none;
+  color: #4d4d4d; /* Dark gray text color */
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #8a8a8a; /* Lighter gray text color on hover */
+}
