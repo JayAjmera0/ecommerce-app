@@ -1,7 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20;
+  padding: 20px;
+}
+
+.home-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.big-image {
+  max-width: 100%; /* Ensure the image scales with the container */
 }
 
 .product-list {
