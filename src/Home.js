@@ -11,7 +11,7 @@ function Home() {
       <div className="home-header">
         <h1>Product List</h1>
         <img
-          src="./"// Replace with the actual image path
+          src="../public/fashion_blog.jpg"// Replace with the actual image path
           className="big-image"
         />
       </div>
