@@ -34,15 +34,17 @@ body {
   margin-bottom: 10px;
 }
 
-/* Add a smaller rectangular box around the product list with a fixed width */
+/* CSS */
+/* CSS */
 .product-list-container {
-  background-color: rgb(211, 210, 214);
-  padding: 10px; /* Reduced padding */
-  margin: 10px; /* Reduced margin */
-  max-width: 200px; /* Set a fixed width for the container */
-  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: space-between;
 }
 
-.product-list {
-  display: flex;
+.product-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px; /* Add margin for spacing */
+  text-align: center;
+  width: 200px;
 }
