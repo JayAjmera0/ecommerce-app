@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+
 const products = [
   { id: 1, type: 2, name: 'Product 1', price: 10, description: 'Description for Product 1' },
   { id: 2, type: 2, name: 'Product 2', price: 15, description: 'Description for Product 2' },
@@ -25,8 +26,9 @@ function ProductDetail({ addToCart }) {
 
   return (
     <div className="product-list">
-      {filteredProducts.map(product => (
+      {filteredProducts.map((product, index) => (
         <div className="product-card" key={product.id}>
+          <div className={`product-image image${index + 1}`}></div>
           <h2>{product.name}</h2>
           <p>${product.price}</p>
           <p>{product.description}</p>

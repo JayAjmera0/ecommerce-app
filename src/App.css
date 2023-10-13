@@ -1,7 +1,13 @@
+/* Original CSS code with modifications for centering */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0; /* Remove top and bottom padding */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  min-height: 100vh;
 }
 
 .home-header {
@@ -14,7 +20,6 @@ body {
   max-height: auto;
 }
 
-
 .product-list {
   display: flex;
   justify-content: space-around;
@@ -25,9 +30,11 @@ body {
 .product-card {
   border: 1px solid #ccc;
   padding: 20px;
-  margin: 10px;
+  margin: 10px; /* Add margin for spacing */
   text-align: center;
   width: 200px;
+  background-color: #ccc9c4; /* Background color for each container */
+  border-radius: 10px; /* Rounded corners */
 }
 
 .product-card h2 {
