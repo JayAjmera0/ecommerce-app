@@ -8,6 +8,15 @@ const products = [
   { id: 2, type: 2, name: 'Product 2', price: 15, description: 'Description for Product 2' },
   { id: 3, type: 2, name: 'Product 3', price: 20, description: 'Description for Product 3' },
   { id: 4, type: 2, name: 'Product 4', price: 25, description: 'Description for Product 4' },
+  { id: 1, type: 1, name: 'Product 1', price: 10, description: 'Description for Product 1' },
+  { id: 2, type: 1, name: 'Product 2', price: 15, description: 'Description for Product 2' },
+  { id: 3, type: 1, name: 'Product 3', price: 20, description: 'Description for Product 3' },
+  { id: 4, type: 1, name: 'Product 4', price: 25, description: 'Description for Product 4' },
+  { id: 1, type: 3, name: 'Product 1', price: 10, description: 'Description for Product 1' },
+  { id: 2, type: 3, name: 'Product 2', price: 15, description: 'Description for Product 2' },
+  { id: 3, type: 3, name: 'Product 3', price: 20, description: 'Description for Product 3' },
+  { id: 4, type: 3, name: 'Product 4', price: 25, description: 'Description for Product 4' },
+
 ];
 
 function ProductDetail({ addToCart }) {
