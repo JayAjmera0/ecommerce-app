@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 const products = [
   { id: 1, name: 'T-Shirts', price: '10 - 25' },
   { id: 2, name: 'Pajamas', price: '10 - 25' },
-  { id: 3, name: 'Chaddi buddy', price: '10 - 25' },
+  { id: 3, name: 'Dresses', price: '10 - 25' },
 ];
 
 function Home() {

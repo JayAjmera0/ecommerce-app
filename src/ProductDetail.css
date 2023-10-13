@@ -15,6 +15,7 @@
   width: 200px;
   background-color: #ccc9c4; /* Background color for each container */
   border-radius: 10px; /* Rounded corners */
+  line-height: 3cap;
 }
 
 .product-card h2 {
@@ -65,3 +66,21 @@
 .product-card button:hover {
   background-color: #0056b3;
 }
+
+/* ProductDetail.css */
+
+/* ... (previous CSS rules) ... */
+
+.product-card button.details-button {
+  background-color: black; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  padding: 10px 15px; /* Button padding */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded button corners */
+}
+
+.product-card button.details-button:hover {
+  background-color: black; /* Button color on hover */
+}
+
