@@ -20,38 +20,3 @@ body {
   max-height: auto;
 }
 
-.product-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-
-.product-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px; /* Add margin for spacing */
-  text-align: center;
-  width: 200px;
-  background-color: #ccc9c4; /* Background color for each container */
-  border-radius: 10px; /* Rounded corners */
-}
-
-.product-card h2 {
-  margin-bottom: 10px;
-}
-
-/* CSS */
-/* CSS */
-.product-list-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.product-container {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px; /* Add margin for spacing */
-  text-align: center;
-  width: 200px;
-}

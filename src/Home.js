@@ -16,7 +16,7 @@ function Home() {
           alt="img"
           className="big-image"
         />
-        <h1>Product List</h1>
+        <h1>Our Products</h1>
       </div>
       <div className="product-list-container"> {/* Container for the product list */}
         <div className="product-list">

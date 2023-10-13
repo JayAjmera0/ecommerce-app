@@ -1,0 +1,67 @@
+/* ProductDetail.css */
+
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 30px; /* Reduce padding for spacing */
+  margin: 20px; /* Add margin for spacing */
+  text-align: center;
+  width: 200px;
+  background-color: #ccc9c4; /* Background color for each container */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.product-card h2 {
+  margin: 5px 0; /* Adjust top and bottom margin for the heading */
+}
+
+/* CSS */
+/* CSS */
+.product-list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container {
+  border: 1px solid #ccc;
+  padding: 10px; /* Reduce padding for spacing */
+  margin: 10px; /* Add margin for spacing */
+  text-align: center;
+  width: 200px;
+}
+
+.product-card .product-image {
+  width: 100px; /* Adjust the width as needed */
+  height: 0px; /* Adjust the height as needed */
+  margin: 0 auto 10px; /* Center the image horizontally and add some space below */
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin: 5px 0; /* Adjust top and bottom margin for the paragraph text */
+  color: #333;
+}
+
+.product-card button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded button corners */
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
