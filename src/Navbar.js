@@ -27,7 +27,7 @@ function Navbar() {
         {user ? (
           <li>{user.attributes.email}</li> // Display user email if authenticated
         ) : (
-          <li><Link to="/login">Login</Link></li> // Provide a login link if not authenticated
+          <li><Link to="https://new-auth.auth.ap-south-1.amazoncognito.com/oauth2/authorize?client_id=6a2p232kd6k0eeegns2ve9e6lm&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fmaster.d1wea5u9my7fnf.amplifyapp.com%2F">Login</Link></li> // Provide a login link if not authenticated
         )}
       </ul>
     </nav>
