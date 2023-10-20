@@ -1,45 +1,30 @@
 {
   "auth": {
-    "ecommerceapp": {
+    "ecommerceappfb026e94": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_auth_ecommerceapp_nativeClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "ecommerceapp"
-        }
-      ]
-    },
-    "AMPLIFY_auth_ecommerceapp_userPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "ecommerceapp"
-        }
-      ]
-    },
-    "AMPLIFY_auth_ecommerceapp_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "ecommerceapp"
-        }
-      ]
-    },
-    "AMPLIFY_auth_ecommerceapp_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "ecommerceapp"
-        }
-      ]
+      "service": "Cognito"
     }
   }
 }
