@@ -2,9 +2,9 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 const products = [
-  { id: 1, name: 'T-Shirts', price: '10 - 25' },
-  { id: 2, name: 'Pajamas', price: '10 - 25' },
-  { id: 3, name: 'Dresses', price: '10 - 25' },
+  { id: 1, name: 'T-Shirts', price: '150 - 250' },
+  { id: 2, name: 'Pajamas', price: '100 - 280' },
+  { id: 3, name: 'Dresses', price: '300 - 500' },
 ];
 
 function Home() {
