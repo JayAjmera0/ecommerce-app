@@ -1,40 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './ProductDetail.css'; // Import the CSS file
-import { fetchData } from './apiService';  // Adjust the path based on where apiService.js is located
+import './ProductDetail.css';
+import { fetchData } from './apiService';
 import { postData } from './apiService';
 
-
-//const products = fetchData();
-const products = [
-  { id: 1, type: 2, name: 'Product 1', price: 10, description: 'Description for Product 1' },
-  { id: 2, type: 2, name: 'Product 2', price: 15, description: 'Description for Product 2' },
-  { id: 3, type: 2, name: 'Product 3', price: 20, description: 'Description for Product 3' },
-  { id: 4, type: 2, name: 'Product 4', price: 25, description: 'Description for Product 4' },
-  { id: 1, type: 1, name: 'Product 1', price: 10, description: 'Description for Product 1' },
-  { id: 2, type: 1, name: 'Product 2', price: 15, description: 'Description for Product 2' },
-  { id: 3, type: 1, name: 'Product 3', price: 20, description: 'Description for Product 3' },
-  { id: 4, type: 1, name: 'Product 4', price: 25, description: 'Description for Product 4' },
-  { id: 1, type: 3, name: 'Product 1', price: 10, description: 'Description for Product 1' },
-  { id: 2, type: 3, name: 'Product 2', price: 15, description: 'Description for Product 2' },
-  { id: 3, type: 3, name: 'Product 3', price: 20, description: 'Description for Product 3' },
-  { id: 4, type: 3, name: 'Product 4', price: 25, description: 'Description for Product 4' },
-
-];
-
 function ProductDetail({ addToCart }) {
+  const [products, setProducts] = useState([]);
   const { id } = useParams();
 
-  // Filter products based on the provided ID
-  const filteredProducts = products.filter(product => product.type === parseInt(id));
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const fetchedProducts = await fetchData();
+        setProducts(fetchedProducts);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleAddToCart = (product) => {
-    addToCart(product);
-    postData(product);
+    addToCart(product.id);
     alert('Product added to cart!');
   };
 
-  if (filteredProducts.length === 0) {
+  // Note: You can't filter on an empty or undefined array. Make sure products is defined and populated.
+  const filteredProducts = products ? products.filter(product => product.type === parseInt(id)) : [];
+
+  if (!filteredProducts || filteredProducts.length === 0) {
     return <div>No products found for the specified ID.</div>;
   }
 
