@@ -1,8 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetail.css'; // Import the CSS file
+import { fetchData } from './apiService';  // Adjust the path based on where apiService.js is located
+import { postData } from './apiService';
 
 
+//const products = fetchData();
 const products = [
   { id: 1, type: 2, name: 'Product 1', price: 10, description: 'Description for Product 1' },
   { id: 2, type: 2, name: 'Product 2', price: 15, description: 'Description for Product 2' },
@@ -27,6 +30,7 @@ function ProductDetail({ addToCart }) {
 
   const handleAddToCart = (product) => {
     addToCart(product);
+    postData(product);
     alert('Product added to cart!');
   };
 

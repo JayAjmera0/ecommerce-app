@@ -13,12 +13,7 @@
     },
     "categories": {
       "auth": {
-        "ecommerceapp": {
-          "nativeClientId": "6a2p232kd6k0eeegns2ve9e6lm",
-          "userPoolId": "ap-south-1_ZDloHdXEq",
-          "userPoolName": "new",
-          "webClientId": "6a2p232kd6k0eeegns2ve9e6lm"
-        }
+        "ecommerceappfb026e94": {}
       }
     }
   }
