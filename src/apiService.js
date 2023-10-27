@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// Hard-coded API URL
-
 
 // Function to fetch data from the API Gateway
 export const fetchData = async () => {

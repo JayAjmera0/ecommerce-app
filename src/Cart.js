@@ -1,11 +1,30 @@
 import React from 'react';
 
 function Cart({ cart, removeFromCart }) {
-  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
-  const handlePlaceOrder = () => {
-    // Logic for placing the order (you can implement this based on your requirements)
-    console.log("Order placed!");
+  // Calculate the total price of the items in the cart
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  };
+
+  // Function to handle placing the order
+  const placeOrder = () => {
+    // Calculate the total price
+    const totalPrice = calculateTotal();
+
+    // Create a JSON object with the cart items and total price
+    const order = {
+      items: cart.map(item => ({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity
+      })),
+      total: totalPrice
+    };
+
+    // Convert the order object to a JSON string and log it
+    console.log("Placing order:", JSON.stringify(order, null, 2));
   };
 
   return (
@@ -14,13 +33,15 @@ function Cart({ cart, removeFromCart }) {
       <ul>
         {cart.map(item => (
           <li key={item.id}>
-            {item.name} - ${item.price} - Quantity: {item.quantity} 
+            {item.name} - ${item.price} - Quantity: {item.quantity}
             <button onClick={() => removeFromCart(item.id)}>Remove</button>
           </li>
         ))}
       </ul>
-      <p>Total: ${totalPrice}</p>
-      <button onClick={handlePlaceOrder}>Place Order</button>
+      {/* Display the total price */}
+      <p>Total: ${calculateTotal().toFixed(2)}</p>
+      {/* Add the Place Order button */}
+      <button onClick={placeOrder}>Place Order</button>
     </div>
   );
 }
