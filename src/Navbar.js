@@ -17,7 +17,7 @@ function Navbar() {
             <button onClick={logout}>Logout</button>
           </li>
         ) : (
-          <li><Link to="/login">Login</Link></li>
+          <li><Link to="https://authorize-wearhouse.auth.ap-south-1.amazoncognito.com/oauth2/authorize?client_id=5bj5dteg80a5rjvnpske2sun69&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fmaster.d1wea5u9my7fnf.amplifyapp.com%2F">Login</Link></li>
         )}
       </ul>
     </nav>
