@@ -14,6 +14,7 @@ function Cart({ cart, removeFromCart }) {
 const placeOrder = async () => {  // Made it asynchronous
   // Calculate the total price
   const totalPrice = calculateTotal();
+  alert('Order Placed Succesfuuly');
 
   // Create an array with the cart items
   const items = cart.map(item => ({
@@ -27,6 +28,7 @@ const placeOrder = async () => {  // Made it asynchronous
   for (const item of items) {
     try {
       const response = await postData(item);  // Assuming postData returns some response
+      
       console.log(`API Response for item ${item.id}:`, response);
     } catch (error) {
       console.error(`Failed to post item ${item.id}:`, error);
