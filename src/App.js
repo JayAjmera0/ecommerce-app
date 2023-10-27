@@ -33,13 +33,7 @@ function App() {
     setCart(updatedCart);
   };
 
-  const login = (email) => {
-    setUser({ email }); // Set user info when user is authenticated
-  };
-
-  const logout = () => {
-    setUser(null); // Clear user info when user logs out
-  };
+  
 
   return (
     <Router>

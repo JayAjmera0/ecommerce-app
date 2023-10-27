@@ -6,6 +6,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0; /* Remove top and bottom padding */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  min-height: 100vh;
+}
+
+.home-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.big-image {
+  width: 100%;
+  max-height: auto;
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
