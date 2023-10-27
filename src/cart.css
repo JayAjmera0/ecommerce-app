@@ -98,7 +98,7 @@ body {
   
   /* Buttons with scale animation and shadow on hover */
   .remove-button:hover, .place-order-button:hover {
-    background-color: black;
+    background-color: rgb(151, 151, 201);
     transform: scale(1.05);
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
   }
