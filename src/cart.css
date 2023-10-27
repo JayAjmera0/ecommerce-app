@@ -51,8 +51,10 @@ body {
   
   /* Item details */
   .item-name { flex: 3; }  /* Adjusted flex property */
-  .item-price { flex: 1; }  /* Adjusted flex property */
-  .item-quantity { flex: 2; }  /* Adjusted flex property */
+  .item-price { flex: 1;
+    margin-left: 20px; }  /* Adjusted flex property */
+  .item-quantity { flex: 2;
+  margin-left: 20px; }  /* Adjusted flex property */
   
   /* Buttons */
   .remove-button, .place-order-button {

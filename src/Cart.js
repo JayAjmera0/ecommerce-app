@@ -47,7 +47,7 @@ return (
         cart.map(item => (
           <li className="cart-item" key={item.id}>
             <span className="item-name">{item.name}</span>
-            <span className="item-price">Price:Rs{item.price}</span>
+            <span className="item-price">Price: Rs{item.price}</span>
             <span className="item-quantity">Quantity: {item.quantity}</span>
             <button className="remove-button" onClick={() => removeFromCart(item.id)}>
               <i className="fas fa-trash-alt"></i> Remove
