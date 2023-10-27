@@ -1,4 +1,5 @@
 import React from 'react';
+import { postData } from './apiService';
 
 function Cart({ cart, removeFromCart }) {
 
@@ -8,24 +9,33 @@ function Cart({ cart, removeFromCart }) {
   };
 
   // Function to handle placing the order
-  const placeOrder = () => {
-    // Calculate the total price
-    const totalPrice = calculateTotal();
+  // Function to handle placing the order
+const placeOrder = async () => {  // Made it asynchronous
+  // Calculate the total price
+  const totalPrice = calculateTotal();
 
-    // Create a JSON object with the cart items and total price
-    const order = {
-      items: cart.map(item => ({
-        id: item.id,
-        name: item.name,
-        price: item.price,
-        quantity: item.quantity
-      })),
-      total: totalPrice
-    };
+  // Create an array with the cart items
+  const items = cart.map(item => ({
+    id: item.id,
+    name: item.name,
+    price: item.price,
+    quantity: item.quantity
+  }));
 
-    // Convert the order object to a JSON string and log it
-    console.log("Placing order:", JSON.stringify(order, null, 2));
-  };
+  // Loop through each item and send it to the API
+  for (const item of items) {
+    try {
+      const response = await postData(item);  // Assuming postData returns some response
+      console.log(`API Response for item ${item.id}:`, response);
+    } catch (error) {
+      console.error(`Failed to post item ${item.id}:`, error);
+    }
+  }
+
+  // Log the items to the console
+  console.log("Placing order:", JSON.stringify(items, null, 2));
+};
+
 
   return (
     <div>

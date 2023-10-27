@@ -1,13 +1,25 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-
-const products = [
-  { id: 1, name: 'T-Shirts', price: '150 - 250' },
-  { id: 2, name: 'Pajamas', price: '100 - 280' },
-  { id: 3, name: 'Dresses', price: '300 - 500' },
-];
+import { fetchProd } from './apiService';
+import { useState, useEffect } from 'react';
+  
 
 function Home() {
+  const [products, setProducts] = useState([]);
+  
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const fetchedProducts = await fetchProd();
+        setProducts(fetchedProducts);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
   return (
     <div>
       <div className="home-header">

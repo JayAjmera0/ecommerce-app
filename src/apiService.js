@@ -3,7 +3,31 @@ import axios from 'axios';
 
 // Function to fetch data from the API Gateway
 export const fetchData = async () => {
-    const API_URL = "https://w5eu7kkkd2.execute-api.ap-south-1.amazonaws.com/demo"; //takes data idhar se
+    const API_URL = "https://lm5ejq5a6h.execute-api.ap-south-1.amazonaws.com/details1"; //takes data idhar se
+
+  try {
+    // Make a GET request to the API Gateway URL
+    const response = await axios.get(API_URL);
+    console.log('Response:', response);
+
+    // Parse the 'body' field from the 'data' field of the response
+    const responseBody = JSON.parse(response.data.body);
+
+    // Now responseBody is a JavaScript object/array that you can use
+    console.log('Parsed body:', responseBody);
+
+    // Return the parsed body
+    return responseBody;
+
+  } catch (error) {
+    // Log any errors and re-throw them
+    console.error('Error fetching data:', error);
+    throw error;
+  }
+};
+
+export const fetchProd = async () => {
+    const API_URL = "https://w5eu7kkkd2.execute-api.ap-south-1.amazonaws.com/demo1"; //takes data idhar se
 
   try {
     // Make a GET request to the API Gateway URL
@@ -27,7 +51,7 @@ export const fetchData = async () => {
 };
 
 export const postData = async (product) => {
-    var post_json = { 'id': 5 };
+    var post_json = product
     const apiUrl = "https://w5eu7kkkd2.execute-api.ap-south-1.amazonaws.com/demo11"; //change kar
     try {
         const response = await fetch(apiUrl, {

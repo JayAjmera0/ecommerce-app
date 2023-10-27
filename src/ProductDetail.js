@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
 import { fetchData } from './apiService';
-import { postData } from './apiService';
+
 
 function ProductDetail({ addToCart }) {
   const [products, setProducts] = useState([]);
