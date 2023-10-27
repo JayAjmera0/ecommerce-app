@@ -39,6 +39,10 @@ a[href="/cart"]:not(.big-image):not(.product-card) {
   color: #d8d3cf;
   font-weight: bold;
 }
+a[href="https://authorize-wearhouse.auth.ap-south-1.amazoncognito.com/oauth2/authorize?client_id=5bj5dteg80a5rjvnpske2sun69&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fmaster.d1wea5u9my7fnf.amplifyapp.com%2F"]:not(.big-image):not(.product-card) {
+  color: #d8d3cf;
+  font-weight: bold;
+}
 
 /* New Interactive Features */
 
