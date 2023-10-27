@@ -1,3 +1,4 @@
+/* Existing Navbar Styles */
 nav {
   background-color: #2e2c2d;
   padding: 20px;
@@ -18,28 +19,47 @@ ul {
 li {
   margin: 0 20px;
   font-size: 18px;
+  position: relative; /* Added for dropdown */
 }
 
-/* Style for the links */
 a {
   text-decoration: none;
   color: #4d4d4d;
-  transition: color 0.3s;
+  transition: color 0.3s, background-color 0.3s; /* Updated for background transition */
+  padding: 10px; /* Added for better hover effect */
 }
 
 a:hover {
   color: #8a8a8a;
+  background-color: rgba(255, 255, 255, 0.1); /* Added for hover effect */
 }
 
-/* Specific style for Home and Cart links */
-a[href="/"]:not(.big-image):not(.product-card) {
-  color: #d8d3cf; /* Text color for Home and Cart links */
-  font-weight: bold; /* Make the text bold */
-}
-
+a[href="/"]:not(.big-image):not(.product-card),
 a[href="/cart"]:not(.big-image):not(.product-card) {
-  color: #d8d3cf; /* Text color for the "CART" link */
-  font-weight: bold; /* Make the text bold */
+  color: #d8d3cf;
+  font-weight: bold;
+}
+
+/* New Interactive Features */
+
+/* Dropdown styles */
+li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 200px;
+}
+
+li .dropdown a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+}
+
+li:hover .dropdown {
+  display: block;
 }
 
 a[href="/login"]:not(.big-image):not(.product-card) {
