@@ -41,3 +41,8 @@ a[href="/cart"]:not(.big-image):not(.product-card) {
   color: #d8d3cf; /* Text color for the "CART" link */
   font-weight: bold; /* Make the text bold */
 }
+
+a[href="/login"]:not(.big-image):not(.product-card) {
+  color: #d8d3cf; /* Text color for the "CART" link */
+  font-weight: bold; /* Make the text bold */
+}
