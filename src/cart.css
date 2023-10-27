@@ -56,7 +56,7 @@ body {
   
   /* Buttons */
   .remove-button, .place-order-button {
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
     padding: 15px 30px;
     margin: 10px;
@@ -67,7 +67,7 @@ body {
   }
   
   .remove-button:hover, .place-order-button:hover {
-    background-color: #45a049;
+    background-color: black;
   }
   
   /* Icons */
@@ -84,6 +84,6 @@ body {
   }
   
   .total-price {
-    color: #e44d26;
+    color: black;
   }
   
