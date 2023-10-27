@@ -23,10 +23,14 @@ body {
   }
   
   /* Cart List */
-  .cart-list {
+.cart-list {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Optional: to make sure items take the full width */
   }
+  
   
   /* Empty Cart Message */
   .empty-cart-message {
@@ -34,9 +38,9 @@ body {
     font-size: 1.2em;
     color: #555;
   }
-  
+
   /* Cart Item */
-  .cart-item {
+.cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
