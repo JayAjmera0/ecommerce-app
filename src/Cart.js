@@ -1,5 +1,6 @@
 import React from 'react';
 import { postData } from './apiService';
+import './cart.css';
 
 function Cart({ cart, removeFromCart }) {
 
@@ -36,24 +37,31 @@ const placeOrder = async () => {  // Made it asynchronous
   console.log("Placing order:", JSON.stringify(items, null, 2));
 };
 
-
-  return (
-    <div>
-      <h1>Shopping Cart</h1>
-      <ul>
-        {cart.map(item => (
-          <li key={item.id}>
-            {item.name} - ${item.price} - Quantity: {item.quantity}
-            <button onClick={() => removeFromCart(item.id)}>Remove</button>
+return (
+  <div className="cart-container">
+    <h1 className="cart-title">Your Shopping Cart</h1>
+    <ul className="cart-list">
+      {cart.length === 0 ? (
+        <p className="empty-cart-message">Your cart is empty.</p>
+      ) : (
+        cart.map(item => (
+          <li className="cart-item" key={item.id}>
+            <span className="item-name">{item.name}</span>
+            <span className="item-price">${item.price}</span>
+            <span className="item-quantity">Quantity: {item.quantity}</span>
+            <button className="remove-button" onClick={() => removeFromCart(item.id)}>
+              <i className="fas fa-trash-alt"></i> Remove
+            </button>
           </li>
-        ))}
-      </ul>
-      {/* Display the total price */}
-      <p>Total: ${calculateTotal().toFixed(2)}</p>
-      {/* Add the Place Order button */}
-      <button onClick={placeOrder}>Place Order</button>
-    </div>
-  );
-}
+        ))
+      )}
+    </ul>
+    <p className="cart-total">Total: <span className="total-price">${calculateTotal().toFixed(2)}</span></p>
+    <button className="place-order-button" onClick={placeOrder}>
+      <i className="fas fa-shopping-bag"></i> Place Order
+    </button>
+  </div>
+);
 
+      }
 export default Cart;
