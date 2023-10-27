@@ -47,7 +47,7 @@ return (
         cart.map(item => (
           <li className="cart-item" key={item.id}>
             <span className="item-name">{item.name}</span>
-            <span className="item-price">${item.price}</span>
+            <span className="item-price">Price:Rs{item.price}</span>
             <span className="item-quantity">Quantity: {item.quantity}</span>
             <button className="remove-button" onClick={() => removeFromCart(item.id)}>
               <i className="fas fa-trash-alt"></i> Remove
@@ -56,7 +56,7 @@ return (
         ))
       )}
     </ul>
-    <p className="cart-total">Total: <span className="total-price">${calculateTotal().toFixed(2)}</span></p>
+    <p className="cart-total">Total: <span className="total-price">Rs{calculateTotal().toFixed(2)}</span></p>
     <button className="place-order-button" onClick={placeOrder}>
       <i className="fas fa-shopping-bag"></i> Place Order
     </button>
