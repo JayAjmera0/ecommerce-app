@@ -4,6 +4,8 @@
 
 This project is a comprehensive e-commerce website with features for user login, user cart, and order placement. The application leverages various AWS services to ensure scalability, security, and efficient data management. The frontend is built using React.js.
 
+View the project here: https://master.d1wea5u9my7fnf.amplifyapp.com/
+
 ## Features
 
 - **🔒 User Login**: Secure user authentication and management.
